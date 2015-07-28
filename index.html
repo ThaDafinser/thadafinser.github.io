@@ -21,9 +21,9 @@
 		<h2>Repositories</h2>
         <div ng-controller="RepoCtrl">
             <div ng-repeat="repo in repos">
-				<div itemscope itemtype="http://schema.org/VideoGame">
+				<div itemscope itemtype="http://schema.org/SoftwareSourceCode">
 					<h3 itemprop="name">{{ repo.name }}</h3>
-					<div itemprop="jobtitle">{{ repo.description }}</div>
+					<div itemprop="description">{{ repo.description }}</div>
 					<div itemprop="programmingLanguage">{{ repo.language }}</div>
 					<a itemprop="codeRepository" href="{{ repo.html_url }}">Open</a>
 
