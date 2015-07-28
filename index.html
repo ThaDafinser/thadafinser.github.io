@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en>
+<html lang="en" ng-app="StarterApp">
     <head>
         <title>ThaDafinser - Martin Keckeis</title>
     </head>
@@ -14,5 +14,16 @@
 			<div itemprop="email">martin.keckeis1@gmail.com</div>
 			<img src="http://www.gravatar.com/avatar/a99c65e75eec315e6e86b2b6cfa948b5" itemprop="image" alt="Photo of Martin Keckeis"/>
         </div>
+
+        <div ng-controller="RepoCtrl">
+            <div ng-repeat="repo in repos">
+				{{ repo.name }}
+			</div>
+        </div>
+                
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="app.js"></script>
+        
     </body>
 </html>
