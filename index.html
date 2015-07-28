@@ -17,7 +17,7 @@
 
         <div ng-controller="RepoCtrl">
             <div ng-repeat="repo in repos">
-				{{ repo.name }}
+				<a href="{{ repo.html_url }}">{{ repo.name }}</a>
 			</div>
         </div>
                 
