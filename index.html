@@ -5,6 +5,9 @@
     </head>
     
     <body>
+		<h1>Test ground for some schema.org snippets</h1>
+
+		<h2>Person</h2>
         <div itemscope itemtype="http://schema.org/Person">
 			<div itemprop="name"><strong>Martin Keckeis</strong></div>
 			<div itemprop="jobtitle">Softwaredeveloper</div>
@@ -15,9 +18,16 @@
 			<img src="http://www.gravatar.com/avatar/a99c65e75eec315e6e86b2b6cfa948b5" itemprop="image" alt="Photo of Martin Keckeis"/>
         </div>
 
+		<h2>Repositories</h2>
         <div ng-controller="RepoCtrl">
             <div ng-repeat="repo in repos">
-				<a href="{{ repo.html_url }}">{{ repo.name }}</a>
+				<div itemscope itemtype="http://schema.org/VideoGame">
+					<h3 itemprop="name">{{ repo.name }}</h3>
+					<div itemprop="jobtitle">{{ repo.description }}</div>
+					<div itemprop="programmingLanguage">{{ repo.language }}</div>
+					<a itemprop="codeRepository" href="{{ repo.html_url }}">Open</a>
+
+				</div>
 			</div>
         </div>
                 
